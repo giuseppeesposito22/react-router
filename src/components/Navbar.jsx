@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+import path from "../data/path";
+
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -21,17 +23,17 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to={path.HOME()}>
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">
+              <NavLink className="nav-link" to={path.ABOUT()}>
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/posts">
+              <NavLink className="nav-link" to={path.POSTS()}>
                 Posts
               </NavLink>
             </li>
