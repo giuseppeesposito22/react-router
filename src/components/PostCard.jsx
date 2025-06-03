@@ -9,12 +9,14 @@ export default function PostCard({ post }) {
           className="card-img-top"
           alt={post.title}
         />
-        <div className="card-body">
+        <div className="card-body ">
           <p className="card-text d-flex flex-column align-items-center justify-content-between">
             <span className="text-center fw-bold fs-4">{post.title}</span>
           </p>
 
-          <Link to={`/posts/${post.id}`}>vai al dettaglio</Link>
+          <Link className="btn btn-primary" to={`/posts/${post.id}`}>
+            Vai al dettaglio
+          </Link>
         </div>
       </div>
     </div>
