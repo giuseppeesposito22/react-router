@@ -4,10 +4,13 @@ import HomePage from "./pages/HomePage";
 
 import AboutPage from "./pages/AboutPage";
 
-import PostsPage from "./pages/PostsPage";
 import DefaultLayout from "./layouts/DefaultLayout";
 
 import path from "./data/path";
+
+// import delle pagine sotto il path posts
+
+import PostListPage from "./pages/posts/PostListPage";
 
 function App() {
   return (
@@ -17,7 +20,11 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path={path.HOME()} element={<HomePage />} />
             <Route path={path.ABOUT()} element={<AboutPage />} />
-            <Route path={path.POSTS()} element={<PostsPage />} />
+
+            {/* rotte che hanno in comune il prefisso posts */}
+            <Route path="/posts">
+              <Route path="" element={<PostListPage />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
