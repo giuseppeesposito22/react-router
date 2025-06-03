@@ -15,11 +15,12 @@ export default function PostDetailPage() {
 
   return (
     <>
-      <h1>Post detail</h1>
+      <h1 className="text-center my-5">Dettaglio</h1>
+
       <img src={`http://localhost:3000${post.image}`} alt={post.title} />
       <h2>{post.title}</h2>
       <p>{post.content}</p>
-      <ul>
+      <ul className="d-flex gap-4 list-unstyled fw-medium">
         {post.tags?.map((tag, i) => (
           <li key={i}>{`# ${tag}`}</li>
         ))}
