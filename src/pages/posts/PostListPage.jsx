@@ -17,7 +17,7 @@ export default function PostListPage() {
 
   return (
     <>
-      <h1>Lista dei post</h1>
+      <h1 className="text-center my-5">Lista dei post</h1>
 
       <div className="row row-cols-2 g-4">
         {posts.map((post) => (
